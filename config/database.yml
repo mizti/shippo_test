@@ -20,7 +20,11 @@ test:
 
 production:
   encoding: utf8
-  adapter: sqlite3
-  database: db/production.sqlite3
+  adapter: postgresql
+  port: 5432
+  username: peurblicmjlvlf
+  host: ec2-54-243-230-119.compute-1.amazonaws.com
+  database: d3o87ujle066li
+  password: 6fRWKRLr-XO9xdAIA5-eTtPlEX
   pool: 5
   timeout: 5000
