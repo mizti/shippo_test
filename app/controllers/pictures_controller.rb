@@ -1,4 +1,9 @@
 class PicturesController < ApplicationController
+  def belongs(i)
+    @drawer = User.find(i)
+    @pic_theme = Theme.find(i)
+  end
+
   # GET /pictures
   # GET /pictures.json
   def index
