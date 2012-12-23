@@ -6,4 +6,7 @@ class HelloController < ApplicationController
   def view
     @msg = 'viewメソッドからこんにちは'
   end
+  def list
+    @books = Book.all
+  end
 end
