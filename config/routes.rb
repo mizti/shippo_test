@@ -1,4 +1,13 @@
 ShippoTest::Application.routes.draw do
+  resources :pictures
+
+
+  resources :themes
+
+
+  resources :users
+
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
   match ':controller(/:action(/:id(.:format)))'
