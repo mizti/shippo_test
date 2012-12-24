@@ -14,7 +14,7 @@ end
 group :production do
   gem 'pg'
   gem 'less-rails'
-  gem 'therubyracer-heroku'
+#  gem 'therubyracer-heroku'
 end
 
 
