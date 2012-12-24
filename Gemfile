@@ -8,10 +8,12 @@ group :development, :test do
   gem 'heroku'
   gem 'sqlite3'
   gem 'therubyracer', '= 0.10.2'
+  gem 'less-rails'
 end
 
 group :production do
   gem 'pg'
+  gem 'less-rails'
   gem 'therubyracer-heroku'
 end
 
