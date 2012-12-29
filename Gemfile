@@ -17,6 +17,8 @@ group :production do
   gem 'therubyracer', '=0.10.2'
 end
 
+gem 'paperclip'
+gem 'aws-sdk'
 
 # Gems used only for assets and not required
 # in production environments by default.
