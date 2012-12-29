@@ -34,14 +34,4 @@ ShippoTest::Application.configure do
 
   # Expands the lines which load the assets
   config.assets.debug = true
-
-  # paperclip-s3
-  config.paperclip_defaults = {
-    :storage => :s3,
-    :s3_credentials => {
-      :bucket => ENV['shippo_test'],
-      :access_key_id => ENV['AKIAIFICY7P7XTDCLLLQ'],
-      :secret_access_key => ENV['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']
-    }
-  }
 end
