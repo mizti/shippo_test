@@ -17,3 +17,8 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# config file
+config/aws*
+config/environments/aws*
+setEnv.sh
