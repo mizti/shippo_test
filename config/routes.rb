@@ -13,9 +13,9 @@ ShippoTest::Application.routes.draw do
   resources :picture, :controller => 'pictures', :only => ["show"]
   resources :themes, :controller => 'theme', :only => ["show"]
 
-  match "picture/draw", :controller => 'pictures', :action => 'draw'
-  match "picture/post", :controller => 'pictures', :action => 'post'
-  match "user/invite",  :controller => 'users', :action => 'invite'
+  match "picture/draw", :controller => 'pictures', :action => 'draw', :via => 'GET'
+  match "picture/post", :controller => 'pictures', :action => 'post', :via => 'GET'
+  match "user/invite",  :controller => 'users', :action => 'invite', :via => 'GET'
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'
