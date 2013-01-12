@@ -1,5 +1,10 @@
 class UsersController < ApplicationController
-  #
+  # GET /user/invite
+  def invite
+    respond_to do |format|
+      format.html
+    end
+  end
 
   # GET /users
   # GET /users.json

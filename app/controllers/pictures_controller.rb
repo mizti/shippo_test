@@ -4,6 +4,20 @@ class PicturesController < ApplicationController
     @pic_theme = Theme.find(i)
   end
 
+  # GET /picture/draw
+  def draw
+    respond_to do |format|
+      format.html
+    end
+  end
+
+  # GET /picture/post
+  def post
+    respond_to do |format|
+      format.html
+    end
+  end
+
   # GET /pictures
   # GET /pictures.json
   def index
