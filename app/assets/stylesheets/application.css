@@ -9,4 +9,8 @@
  *
  *= require bootstrap_and_overrides
  *= require base
+ *= require paint.css
+ *= require jquery-ui-1.8.17.custom.css
+ *= require farbtastic.css
  */
+

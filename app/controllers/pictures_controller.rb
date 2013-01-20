@@ -44,9 +44,10 @@ class PicturesController < ApplicationController
   # GET /pictures/new.json
   def new
     @picture = Picture.new
-
+    @pictures = Picture.all
+    @users = User.all
     respond_to do |format|
-      format.html # new.html.erb
+      format.html { render }# new.html.erb
       format.json { render json: @picture }
     end
   end

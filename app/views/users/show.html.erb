@@ -10,6 +10,21 @@
   <%= @user.provider %>
 </p>
 
+<div>
+  <b>Pictures:</b>
+</div>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', users_path %>
+<div class="pic_album" style="background-color: gold">
+  <ul>
+    <% @user.pictures.each do |picture| %>
+      <li>
+        <a href="#">
+          <div>
+            <%= image_tag picture.image.url(:thumb) %>
+            <p><%= picture.filename %></p>
+          </div>
+        </a>
+      </li>
+    <% end %>
+  </ul>
+</div>

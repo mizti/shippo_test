@@ -1,21 +1,22 @@
 ShippoTest::Application.routes.draw do
+
+  match "picture/draw", :controller => 'pictures', :action => 'draw', :via => 'GET'
+  match "picture/post", :controller => 'pictures', :action => 'post', :via => 'GET'
+  match "user/invite",  :controller => 'users', :action => 'invite', :via => 'GET'
   
   #scaffolds
-  #resources :pictures
-  #resources :themes
-  #resources :users
+  resources :pictures
+  resources :themes
+  resources :users
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
   #match ':controller(/:action(/:id(.:format)))'
 
-  resources :user, :controller => 'users', :only => ["show"]
-  resources :picture, :controller => 'pictures', :only => ["show"]
-  resources :themes, :controller => 'theme', :only => ["show"]
 
-  match "picture/draw", :controller => 'pictures', :action => 'draw', :via => 'GET'
-  match "picture/post", :controller => 'pictures', :action => 'post', :via => 'GET'
-  match "user/invite",  :controller => 'users', :action => 'invite', :via => 'GET'
+  #resources :user, :controller => 'users'#, :only => ["show"]
+  #resources :picture, :controller => 'pictures'#, :only => ["show"]
+  #resources :themes, :controller => 'theme'#, :only => ["show"]
 
   # Sample of regular route:
   #   match 'products/:id' => 'catalog#view'

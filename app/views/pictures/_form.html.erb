@@ -12,8 +12,7 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :user_id %><br />
-    <%= f.number_field :user_id %>
+    <%= f.collection_select(:user_id, @users, :id, :name) %><br />
   </div>
   <div class="field">
     <%= f.label :theme_id %><br />
