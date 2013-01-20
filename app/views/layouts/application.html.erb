@@ -12,11 +12,6 @@
       <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js" type="text/javascript"></script>
     <![endif]-->
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
-<%= javascript_include_tag "jquery-ui-1.8.17.custom.min" %>
-<%= javascript_include_tag "farbtastic" %>
-<%= javascript_include_tag "rgbcolor" %>
-<%= javascript_include_tag "paint" %>
  
    <%= stylesheet_link_tag "application", :media => "all" %>
 
@@ -71,5 +66,10 @@
     <!-- Javascripts
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+    <%= javascript_include_tag "jquery-ui-1.8.17.custom.min" %>
+    <%= javascript_include_tag "farbtastic" %>
+    <%= javascript_include_tag "rgbcolor" %>
+    <%= javascript_include_tag "paint" %>
   </body>
 </html>

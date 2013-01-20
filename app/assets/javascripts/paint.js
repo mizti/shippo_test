@@ -53,7 +53,7 @@ $(function() {
 
 	$('#bw').val($('#slider').slider('value'));
 	$('#alpha').val($('#slider2').slider('value'));
-	$('#slider2').css({'background-image':'url(images/alpha.gif)','background-position':'0px -2px'});
+	$('#slider2').css({'background-image':'url(/assets/draw/alpha.gif)','background-position':'0px -2px'});
 
     $('li').addClass('ofclic');
     $('li').click(function() {
