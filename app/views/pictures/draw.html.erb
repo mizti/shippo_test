@@ -1,164 +1,164 @@
+<div id="drawbox">
 <div id="canvasbox">
-<canvas width="500" height="500">お使いのブラウザはHTML5のCanvas要素に対応していません。</canvas>
-<div id="button">
-  <input type="radio" name="brush" id="brush1" checked="checked" /><label for="brush1"><img src="/assets/draw/pen1.gif" alt="ブラシ" title="ブラシ"></label>
-　<input type="radio" name="brush" id="brush2" /><label for="brush2"><img src="/assets/draw/pen2.gif" alt="ぼかし１" title="ぼかし１"></label>
-　<input type="radio" name="brush" id="brush3" /><label for="brush3"><img src="/assets/draw/pen3.gif" alt="ぼかし２" title="ぼかし２"></label>
-　<input type="radio" name="brush" id="brush4" /><label for="brush4"><img src="/assets/draw/pen4.gif" alt="パステル" title="パステル"></label>
-　<input type="radio" name="brush" id="miter" /><label for="miter"><img src="/assets/draw/penm.gif" alt="角ペン" title="角ペン"></label>
-　<input type="radio" name="brush" id="eraser" /><label for="eraser"><img src="/assets/draw/pen0.png" alt="消しゴム" title="消しゴム"></label>
-　<input type="radio" name="brush" id="spuit" /><label for="spuit"><img src="/assets/draw/spuit.gif" alt="スポイト" title="スポイト"></label>
+<canvas width="500" height="500" id="main_canvas">お使いのブラウザはHTML5のCanvas要素に対応していません。</canvas>
 </div>
-
-<div id="bwbox">
-ブラシ幅&nbsp;<input type="text" id="bw" value="1" readonly="readonly" />
-<div id="slider"></div>
-</div>
-<div id="bwbox">
-透明度　&nbsp;<input type="text" id="alpha" value="100" readonly="readonly" />
-<div id="slider2"></div>
-</div>
-
-<div id="button">
-<input type="button" id="undo" value="戻る" />
-<input type="button" id="restore" value="復元" />
-　　<input type="button" id="clear" value="消去" />
-<input type="button" id="save" value="画像で保存" />
-</div>
-</div>
-
 <div id="colorlist">
 <div id="button">
-<input type="button" id="back1" value="白背景" />
-<input type="button" id="back2" value="黒背景" />
-<input type="button" id="back3" value="透明" />
+<input type="button" id="back1" value="白背景">
+<input type="button" id="back2" value="黒背景">
+<input type="button" id="back3" value="透明">
 </div>
 <ul>
-<li style="background-color:#000000">
-</li><li style="background-color:#1b1b1b">
-</li><li style="background-color:#313131">
-</li><li style="background-color:#434343">
-</li><li style="background-color:#535353">
-</li><li style="background-color:#626262">
-</li><li style="background-color:#707070">
-</li><li style="background-color:#898989">
-</li><li style="background-color:#959595">
-</li><li style="background-color:#a0a0a0">
-</li><li style="background-color:#b5b5b5">
-</li><li style="background-color:#c9c9c9">
-</li><li style="background-color:#dcdcdc">
-</li><li style="background-color:#ffffff">
-</li><li style="background-color:#ff0000">
-</li><li style="background-color:#ffff00">
-</li><li style="background-color:#00ff00">
-</li><li style="background-color:#00ffff">
-</li><li style="background-color:#0000ff">
-</li><li style="background-color:#ff00ff">
-</li><li style="background-color:#e60012">
-</li><li style="background-color:#fff100">
-</li><li style="background-color:#009944">
-</li><li style="background-color:#00a0e9">
-</li><li style="background-color:#1d2088">
-</li><li style="background-color:#e4007f">
-</li><li style="background-color:#f29b76">
-</li><li style="background-color:#f6b37f">
-</li><li style="background-color:#facd89">
-</li><li style="background-color:#fff799">
-</li><li style="background-color:#cce198">
-</li><li style="background-color:#acd598">
-</li><li style="background-color:#89c997">
-</li><li style="background-color:#84ccc9">
-</li><li style="background-color:#7ecef4">
-</li><li style="background-color:#88abda">
-</li><li style="background-color:#8c97cb">
-</li><li style="background-color:#8f82bc">
-</li><li style="background-color:#aa89bd">
-</li><li style="background-color:#c490bf">
-</li><li style="background-color:#f19ec2">
-</li><li style="background-color:#f29c9f">
-</li><li style="background-color:#ec6941">
-</li><li style="background-color:#f19149">
-</li><li style="background-color:#f8b551">
-</li><li style="background-color:#fff45c">
-</li><li style="background-color:#b3d465">
-</li><li style="background-color:#80c269">
-</li><li style="background-color:#32b16c">
-</li><li style="background-color:#13b5b1">
-</li><li style="background-color:#00b7ee">
-</li><li style="background-color:#448aca">
-</li><li style="background-color:#556fb5">
-</li><li style="background-color:#5f52a0">
-</li><li style="background-color:#8957a1">
-</li><li style="background-color:#ae5da1">
-</li><li style="background-color:#ea68a2">
-</li><li style="background-color:#eb6877">
-</li><li style="background-color:#e60012">
-</li><li style="background-color:#eb6100">
-</li><li style="background-color:#fff100">
-</li><li style="background-color:#8fc31f">
-</li><li style="background-color:#22ac38">
-</li><li style="background-color:#009944">
-</li><li style="background-color:#009e96">
-</li><li style="background-color:#00a0e9">
-</li><li style="background-color:#0068b7">
-</li><li style="background-color:#00479d">
-</li><li style="background-color:#1d2088">
-</li><li style="background-color:#601986">
-</li><li style="background-color:#920783">
-</li><li style="background-color:#e4007f">
-</li><li style="background-color:#e5004f">
-</li><li style="background-color:#a40000">
-</li><li style="background-color:#a84200">
-</li><li style="background-color:#ac6a00">
-</li><li style="background-color:#b7aa00">
-</li><li style="background-color:#638c0b">
-</li><li style="background-color:#097c25">
-</li><li style="background-color:#007130">
-</li><li style="background-color:#00736d">
-</li><li style="background-color:#0075a9">
-</li><li style="background-color:#004986">
-</li><li style="background-color:#002e73">
-</li><li style="background-color:#100964">
-</li><li style="background-color:#440062">
-</li><li style="background-color:#6a005f">
-</li><li style="background-color:#a4005b">
-</li><li style="background-color:#a40035">
-</li><li style="background-color:#7d0000">
-</li><li style="background-color:#7f2d00">
-</li><li style="background-color:#834e00">
-</li><li style="background-color:#8a8000">
-</li><li style="background-color:#486a00">
-</li><li style="background-color:#005e15">
-</li><li style="background-color:#00561f">
-</li><li style="background-color:#005752">
-</li><li style="background-color:#005982">
-</li><li style="background-color:#003567">
-</li><li style="background-color:#001c58">
-</li><li style="background-color:#03004c">
-</li><li style="background-color:#31004a">
-</li><li style="background-color:#500047">
-</li><li style="background-color:#7e0043">
-</li><li style="background-color:#7d0022">
-</li><li style="background-color:#d1c0a5">
-</li><li style="background-color:#a6937c">
-</li><li style="background-color:#7e6b5a">
-</li><li style="background-color:#59493f">
-</li><li style="background-color:#362e2b">
-</li><li style="background-color:#cfa972">
-</li><li style="background-color:#b28850">
-</li><li style="background-color:#996c33">
-</li><li style="background-color:#81511c">
-</li><li style="background-color:#6a3906">
-</li><li style="background-color:#fdead6">
-</li><li style="background-color:#f9d9b8">
-</li><li style="background-color:#f5cea5">
-</li><li style="background-color:#f1bf8b">
-</li><li style="background-color:#eeb477">
+<li style="background-color:#000000" class="ofclic">
+</li><li style="background-color:#1b1b1b" class="ofclic">
+</li><li style="background-color:#313131" class="ofclic">
+</li><li style="background-color:#434343" class="ofclic">
+</li><li style="background-color:#535353" class="ofclic">
+</li><li style="background-color:#626262" class="ofclic">
+</li><li style="background-color:#707070" class="ofclic">
+</li><li style="background-color:#898989" class="ofclic">
+</li><li style="background-color:#959595" class="ofclic">
+</li><li style="background-color:#a0a0a0" class="ofclic">
+</li><li style="background-color:#b5b5b5" class="ofclic">
+</li><li style="background-color:#c9c9c9" class="ofclic">
+</li><li style="background-color:#dcdcdc" class="ofclic">
+</li><li style="background-color:#ffffff" class="ofclic">
+</li><li style="background-color:#ff0000" class="ofclic">
+</li><li style="background-color:#ffff00" class="ofclic">
+</li><li style="background-color:#00ff00" class="ofclic">
+</li><li style="background-color:#00ffff" class="ofclic">
+</li><li style="background-color:#0000ff" class="ofclic">
+</li><li style="background-color:#ff00ff" class="ofclic">
+</li><li style="background-color:#e60012" class="ofclic">
+</li><li style="background-color:#fff100" class="ofclic">
+</li><li style="background-color:#009944" class="ofclic">
+</li><li style="background-color:#00a0e9" class="ofclic">
+</li><li style="background-color:#1d2088" class="ofclic">
+</li><li style="background-color:#e4007f" class="ofclic">
+</li><li style="background-color:#f29b76" class="ofclic">
+</li><li style="background-color:#f6b37f" class="ofclic">
+</li><li style="background-color:#facd89" class="ofclic">
+</li><li style="background-color:#fff799" class="ofclic">
+</li><li style="background-color:#cce198" class="ofclic">
+</li><li style="background-color:#acd598" class="ofclic">
+</li><li style="background-color:#89c997" class="ofclic">
+</li><li style="background-color:#84ccc9" class="ofclic">
+</li><li style="background-color:#7ecef4" class="ofclic">
+</li><li style="background-color:#88abda" class="ofclic">
+</li><li style="background-color:#8c97cb" class="ofclic">
+</li><li style="background-color:#8f82bc" class="ofclic">
+</li><li style="background-color:#aa89bd" class="ofclic">
+</li><li style="background-color:#c490bf" class="ofclic">
+</li><li style="background-color:#f19ec2" class="ofclic">
+</li><li style="background-color:#f29c9f" class="ofclic">
+</li><li style="background-color:#ec6941" class="ofclic">
+</li><li style="background-color:#f19149" class="ofclic">
+</li><li style="background-color:#f8b551" class="ofclic">
+</li><li style="background-color:#fff45c" class="ofclic">
+</li><li style="background-color:#b3d465" class="ofclic">
+</li><li style="background-color:#80c269" class="ofclic">
+</li><li style="background-color:#32b16c" class="ofclic">
+</li><li style="background-color:#13b5b1" class="ofclic">
+</li><li style="background-color:#00b7ee" class="ofclic">
+</li><li style="background-color:#448aca" class="ofclic">
+</li><li style="background-color:#556fb5" class="ofclic">
+</li><li style="background-color:#5f52a0" class="ofclic">
+</li><li style="background-color:#8957a1" class="ofclic">
+</li><li style="background-color:#ae5da1" class="ofclic">
+</li><li style="background-color:#ea68a2" class="ofclic">
+</li><li style="background-color:#eb6877" class="ofclic">
+</li><li style="background-color:#e60012" class="ofclic">
+</li><li style="background-color:#eb6100" class="ofclic">
+</li><li style="background-color:#fff100" class="ofclic">
+</li><li style="background-color:#8fc31f" class="ofclic">
+</li><li style="background-color:#22ac38" class="ofclic">
+</li><li style="background-color:#009944" class="ofclic">
+</li><li style="background-color:#009e96" class="ofclic">
+</li><li style="background-color:#00a0e9" class="ofclic">
+</li><li style="background-color:#0068b7" class="ofclic">
+</li><li style="background-color:#00479d" class="ofclic">
+</li><li style="background-color:#1d2088" class="ofclic">
+</li><li style="background-color:#601986" class="ofclic">
+</li><li style="background-color:#920783" class="ofclic">
+</li><li style="background-color:#e4007f" class="ofclic">
+</li><li style="background-color:#e5004f" class="ofclic">
+</li><li style="background-color:#a40000" class="ofclic">
+</li><li style="background-color:#a84200" class="ofclic">
+</li><li style="background-color:#ac6a00" class="ofclic">
+</li><li style="background-color:#b7aa00" class="ofclic">
+</li><li style="background-color:#638c0b" class="ofclic">
+</li><li style="background-color:#097c25" class="ofclic">
+</li><li style="background-color:#007130" class="ofclic">
+</li><li style="background-color:#00736d" class="ofclic">
+</li><li style="background-color:#0075a9" class="ofclic">
+</li><li style="background-color:#004986" class="ofclic">
+</li><li style="background-color:#002e73" class="ofclic">
+</li><li style="background-color:#100964" class="ofclic">
+</li><li style="background-color:#440062" class="ofclic">
+</li><li style="background-color:#6a005f" class="ofclic">
+</li><li style="background-color:#a4005b" class="ofclic">
+</li><li style="background-color:#a40035" class="ofclic">
+</li><li style="background-color:#7d0000" class="ofclic">
+</li><li style="background-color:#7f2d00" class="ofclic">
+</li><li style="background-color:#834e00" class="ofclic">
+</li><li style="background-color:#8a8000" class="ofclic">
+</li><li style="background-color:#486a00" class="ofclic">
+</li><li style="background-color:#005e15" class="ofclic">
+</li><li style="background-color:#00561f" class="ofclic">
+</li><li style="background-color:#005752" class="ofclic">
+</li><li style="background-color:#005982" class="ofclic">
+</li><li style="background-color:#003567" class="ofclic">
+</li><li style="background-color:#001c58" class="ofclic">
+</li><li style="background-color:#03004c" class="ofclic">
+</li><li style="background-color:#31004a" class="ofclic">
+</li><li style="background-color:#500047" class="ofclic">
+</li><li style="background-color:#7e0043" class="ofclic">
+</li><li style="background-color:#7d0022" class="ofclic">
+</li><li style="background-color:#d1c0a5" class="ofclic">
+</li><li style="background-color:#a6937c" class="ofclic">
+</li><li style="background-color:#7e6b5a" class="ofclic">
+</li><li style="background-color:#59493f" class="ofclic">
+</li><li style="background-color:#362e2b" class="ofclic">
+</li><li style="background-color:#cfa972" class="ofclic">
+</li><li style="background-color:#b28850" class="ofclic">
+</li><li style="background-color:#996c33" class="ofclic">
+</li><li style="background-color:#81511c" class="ofclic">
+</li><li style="background-color:#6a3906" class="ofclic">
+</li><li style="background-color:#fdead6" class="ofclic">
+</li><li style="background-color:#f9d9b8" class="ofclic">
+</li><li style="background-color:#f5cea5" class="ofclic">
+</li><li style="background-color:#f1bf8b" class="ofclic">
+</li><li style="background-color:#eeb477" class="ofclic">
 </li>
 </ul>
 
 <div id="colorpick">
-<input type="text" id="color" name="color" value="#123456" readonly="readonly" />　Color Picker
-<div id="colorpicker"></div>
+<input type="text" id="color" name="color" value="#123456" readonly="readonly" style="background-color: rgb(18, 52, 86); color: rgb(255, 255, 255);">Color Picker
+<div id="colorpicker"><div class="farbtastic"><div class="color" style="background-color: rgb(0, 127, 255);"></div><div class="wheel"></div><div class="overlay"></div><div class="h-marker marker" style="left: 55px; top: 170px;"></div><div class="sl-marker marker" style="left: 82px; top: 127px;"></div></div></div>
+</div>
+</div><div id="button">
+<input type="radio" name="brush" id="brush1" checked="checked"><label for="brush1"><img src="/assets/draw/pen1.gif" alt="ブラシ" title="ブラシ"></label>
+<input type="radio" name="brush" id="brush2"><label for="brush2"><img src="/assets/draw/pen2.gif" alt="ぼかし１" title="ぼかし１"></label>
+<input type="radio" name="brush" id="brush3"><label for="brush3"><img src="/assets/draw/pen3.gif" alt="ぼかし２" title="ぼかし２"></label>
+<input type="radio" name="brush" id="brush4"><label for="brush4"><img src="/assets/draw/pen4.gif" alt="パステル" title="パステル"></label>
+<input type="radio" name="brush" id="miter"><label for="miter"><img src="/assets/draw/penm.gif" alt="角ペン" title="角ペン"></label>
+<input type="radio" name="brush" id="eraser"><label for="eraser"><img src="/assets/draw/pen0.png" alt="消しゴム" title="消しゴム"></label>
+<input type="radio" name="brush" id="spuit"><label for="spuit"><img src="/assets/draw/spuit.gif" alt="スポイト" title="スポイト"></label>
+</div>
+
+<div id="bwbox">
+ブラシ幅&nbsp;<input type="text" id="bw" value="1" readonly="readonly">
+<div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a></div>
+</div>
+<div id="bwbox">
+透明度&nbsp;<input type="text" id="alpha" value="100" readonly="readonly">
+<div id="slider2" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="background-image: url(http://localhost:3000/assets/draw/alpha.gif); background-position: 0px -2px;"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
+</div>
+
+<div id="button">
+<input type="button" id="undo" value="戻る">
+<input type="button" id="restore" value="復元">
+<input type="button" id="clear" value="消去">
+<input type="button" id="save" value="画像で保存">
 </div>
 </div>

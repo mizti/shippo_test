@@ -52,6 +52,7 @@ class PicturesController < ApplicationController
     end
   end
 
+
   # GET /pictures/1/edit
   def edit
     @picture = Picture.find(params[:id])

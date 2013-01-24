@@ -7,9 +7,13 @@ canvas {
     border: 5px solid #ccc;
     margin: 0px 0px 10px 0px;
 }
+#main_canvas {
+    background-color: #FFFFFF;
+}
+#drawbox{
+    width: 770px;
+}
 #button {
-    position: relative;
-clear: both;
 }
 #button img { vertical-align:middle; }
 #save {
@@ -19,9 +23,7 @@ clear: both;
 
 }
 #colorlist {
-    position: absolute;
     top: 20px;
-    left: 550px;
     width: 220px;
 }
 ul {
