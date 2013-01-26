@@ -3,11 +3,16 @@ ShippoTest::Application.routes.draw do
   match "picture/draw", :controller => 'pictures', :action => 'draw', :via => 'GET'
   match "picture/post", :controller => 'pictures', :action => 'post', :via => 'GET'
   match "user/invite",  :controller => 'users', :action => 'invite', :via => 'GET'
-  
+
   #scaffolds
   resources :pictures
   resources :themes
   resources :users
+
+  match '/auth/:provider/callback', to: 'sessions#create'
+  match '/auth/failure' => 'sessions#failure'
+  match '/signin/:service' => 'sessions#new', :as => :signin
+  match '/signout' => 'sessions#destroy', :as => :signout
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

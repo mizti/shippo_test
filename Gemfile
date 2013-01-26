@@ -1,6 +1,12 @@
 source 'https://rubygems.org'
 
 gem 'rails', '3.2.9'
+#OmniAuth
+gem 'omniauth'
+gem "omniauth-facebook",          :github => 'mkdynamic/omniauth-facebook'
+gem "omniauth-openid",            :git => 'git://github.com/intridea/omniauth-openid.git'
+gem "omniauth-twitter",           :github => 'arunagw/omniauth-twitter'
+gem "omniauth-mixi"
 
 # Bundle edge Rails instead:
 # gem 'rails', :git => 'git://github.com/rails/rails.git'
