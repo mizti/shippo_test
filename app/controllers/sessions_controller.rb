@@ -2,8 +2,7 @@ class SessionsController < ApplicationController
   def create
     auth = request.env["omniauth.auth"]
     user = User.where(:provider => auth['provider'], :uid => auth['uid']).first || User.create_with_omniauth(auth)
-    p auth.to_s
-    session[:uesr_id] = user.id
+    session[:user_id] = user.id
     redirect_to root_url, :notice => "Sign in successful"
   end
 

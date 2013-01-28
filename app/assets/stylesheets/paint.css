@@ -10,7 +10,6 @@ canvas {
 #drawbox{
 }
 #canvasbox {
-  float: left;
 }
 #main_canvas {
   background-color: #FFFFFF;
@@ -18,8 +17,6 @@ canvas {
 #colorlist {
   top: 20px;
   width: 220px;
-  margin-left: 10px;
-  float: left;
 }
 #colorgrid {
   margin-left: 0px;
@@ -37,10 +34,13 @@ canvas {
   cursor:pointer;
   cursor:hand;
 }
-#bwbox {
-  margin: 20px 0px 20px 0px;
+#bwbox_width {
+  margin: 15px 15px 20px 0px;
   font-size:13px;
-  float: left;
+}
+#bwbox_alpha {
+  margin: 15px 15px 20px 0px;
+  font-size:13px;
 }
 #bw,#alpha {
   display:inline-block;
@@ -49,23 +49,32 @@ canvas {
   border: 1px solid #BBBBBB;
 }
 #slider,#slider2 {
-  margin: -18px 0px 0px 110px;
-  width: 380px;
+  margin: -30px 0px 0px 110px;
+  width: 360px;
 }
-#button {
-  float: left;
+#brush_buttons {
   margin-left: 10px;
   margin-right: 10px;
+  margin-bottom: 15px;
+}
+#edit_buttons {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+#post_buttons {
+  margin-bottom: 10px;
 }
 #button img {
   vertical-align:middle; 
 }
 #save {
+  margin-left: 10px;
 }
 #clear {
+  margin-left: 10px;
 }
 ul {
-  margin: 10 0 0 0;
+  margin: 10px 0px 0px 0px;
   padding: 0;
   list-style: none;
 }
@@ -75,13 +84,14 @@ li {
   display:inline-block;
   margin: 0;
   padding: 0;
-  width: 15px;
+  width: 20px;
   height: 15px;
 }
 .ofclic { border:1px #FFFFFF solid }
 .clic { border:1px #000000 solid }
 
-label {
-  cursor:pointer;
-  cursor:hand;
+.brash_label {
+  display:inline-block;
+  margin-top: 30px;
+  margin-right: 14px;
 }

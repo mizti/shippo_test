@@ -1,17 +1,21 @@
-<div id="drawbox">
-  <div id="canvasbox">
-    <canvas width="400" height="400" id="main_canvas">お使いのブラウザはHTML5のCanvas要素に対応していません。</canvas>
+<div id="drawbox" class="container-fluid">
+  <div id="canvasbox" class="span5">
+    <canvas width="450" height="450" id="main_canvas">お使いのブラウザはHTML5のCanvas要素に対応していません。</canvas>
+    <div id="edit_buttons">
+      <input type="button" class="btn btn-large" id="undo" value="いまのなし">
+      <input type="button" class="btn btn-large" id="restore" value="やっぱあり">
+    </div>
+    <div id="brush_buttons">
+      <input type="radio" name="brush" id="brush1" checked="checked"><label class="brash_label" for="brush1"><img src="/assets/draw/pen1.gif" alt="ブラシ" title="ブラシ"></label>
+      <input type="radio" name="brush" id="brush2"><label class="brash_label" for="brush2"><img src="/assets/draw/pen2.gif" alt="ぼかし１" title="ぼかし１"></label>
+      <input type="radio" name="brush" id="brush3"><label class="brash_label" for="brush3"><img src="/assets/draw/pen3.gif" alt="ぼかし２" title="ぼかし２"></label>
+      <input type="radio" name="brush" id="brush4"><label class="brash_label" for="brush4"><img src="/assets/draw/pen4.gif" alt="パステル" title="パステル"></label>
+      <input type="radio" name="brush" id="miter"><label class="brash_label" for="miter"><img src="/assets/draw/penm.gif" alt="角ペン" title="角ペン"></label>
+      <input type="radio" name="brush" id="eraser"><label class="brash_label" for="eraser"><img src="/assets/draw/pen0.png" alt="消しゴム" title="消しゴム"></label>
+      <input type="radio" name="brush" id="spuit"><label class="brash_label" for="spuit"><img src="/assets/draw/spuit.gif" alt="スポイト" title="スポイト"></label>
+    </div>
   </div>
-  <div id="button">
-    <input type="radio" name="brush" id="brush1" checked="checked"><label for="brush1"><img src="/assets/draw/pen1.gif" alt="ブラシ" title="ブラシ"></label>
-    <input type="radio" name="brush" id="brush2"><label for="brush2"><img src="/assets/draw/pen2.gif" alt="ぼかし１" title="ぼかし１"></label>
-    <input type="radio" name="brush" id="brush3"><label for="brush3"><img src="/assets/draw/pen3.gif" alt="ぼかし２" title="ぼかし２"></label>
-    <input type="radio" name="brush" id="brush4"><label for="brush4"><img src="/assets/draw/pen4.gif" alt="パステル" title="パステル"></label>
-    <input type="radio" name="brush" id="miter"><label for="miter"><img src="/assets/draw/penm.gif" alt="角ペン" title="角ペン"></label>
-    <input type="radio" name="brush" id="eraser"><label for="eraser"><img src="/assets/draw/pen0.png" alt="消しゴム" title="消しゴム"></label>
-    <input type="radio" name="brush" id="spuit"><label for="spuit"><img src="/assets/draw/spuit.gif" alt="スポイト" title="スポイト"></label>
-  </div>
-  <div id="colorlist">
+  <div id="colorlist" class="span4">
     <ul id="colorgrid">
       <li style="background-color:#000000" class="ofclic">
       </li><li style="background-color:#1b1b1b" class="ofclic">
@@ -141,19 +145,21 @@
       <div id="colorpicker"><div class="farbtastic"><div class="color" style="background-color: rgb(0, 127, 255);"></div><div class="wheel"></div><div class="overlay"></div><div class="h-marker marker" style="left: 55px; top: 170px;"></div><div class="sl-marker marker" style="left: 82px; top: 127px;"></div></div></div>
     </div>
   </div>
-  <div id="bwbox">
+  <div id="bwbox_width" class="span9">
     ブラシ幅&nbsp;<input type="text" id="bw" value="1" readonly="readonly">
-    <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a></div>
+    <div id="slider" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all">
+      <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 0%;"></a>
+    </div>
   </div>
-  <div id="bwbox">
-    透明度&nbsp;<input type="text" id="alpha" value="100" readonly="readonly">
-    <div id="slider2" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="background-image: url(http://localhost:3000/assets/draw/alpha.gif); background-position: 0px -2px;"><a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;"></a></div>
+  <div id="bwbox_alpha" class="span9">
+    透明度&nbsp;
+    <input type="text" id="alpha" value="100" readonly="readonly">
+    <div id="slider2" class="ui-slider ui-slider-horizontal ui-widget ui-widget-content ui-corner-all" style="background-image: url(http://localhost:3000/assets/draw/alpha.gif); background-position: 0px -2px;">
+      <a class="ui-slider-handle ui-state-default ui-corner-all" href="#" style="left: 100%;" /></a>
+    </div>
   </div>
-
-  <div id="button">
-    <input type="button" id="undo" value="戻る">
-    <input type="button" id="restore" value="復元">
-    <input type="button" id="clear" value="消去">
-    <input type="button" id="save" value="画像で保存">
+  <div id="post_buttons" class="span3 offset5">
+    <input type="button" class="btn btn-large" id="clear" value="消去">
+    <input type="button"  class="btn btn-large btn-primary" id="save" value="画像で保存">
   </div>
 </div>

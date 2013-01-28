@@ -11,7 +11,7 @@ ShippoTest::Application.routes.draw do
 
   match '/auth/:provider/callback', to: 'sessions#create'
   match '/auth/failure' => 'sessions#failure'
-  match '/signin/:service' => 'sessions#new', :as => :signin
+  match '/auth/:service' => 'sessions#new', :as => :signin
   match '/signout' => 'sessions#destroy', :as => :signout
 
   # The priority is based upon order of creation:
