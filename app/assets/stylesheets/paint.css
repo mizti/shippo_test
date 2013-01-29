@@ -13,6 +13,8 @@ canvas {
 }
 #main_canvas {
   background-color: #FFFFFF;
+  width: 450px;
+  height: 450px;
 }
 #colorlist {
   top: 20px;
