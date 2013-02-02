@@ -33,7 +33,7 @@ ShippoTest::Application.configure do
   config.assets.compress = false
 
   # Expands the lines which load the assets
-  config.assets.debug = true
+  config.assets.debug = false
   # paperclip-s3
   config.paperclip_defaults = {
     :storage => :s3,

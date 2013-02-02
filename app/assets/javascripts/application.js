@@ -10,8 +10,5 @@
 // WARNING: THE FIRST BLANK LINE MARKS THE END OF WHAT'S TO BE PROCESSED, ANY BLANK LINE SHOULD
 // GO AFTER THE REQUIRES BELOW.
 //
-//= require jquery
-//= require jquery_ujs
-//= require jquery-ui-1.8.17.custom.min.js
-//= require twitter/bootstrap
-//= require layout
+//= require jquery-ui-1.8.17.custom.min
+//
