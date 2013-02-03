@@ -8,9 +8,10 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  * require jquery-ui-1.8.17.custom
- * require bootstrap.min
- *= require scaffolds
- *= require bootstrap_and_overrides
+ *= require bootstrap.min
+ *= require bootstrap-responsive.min
+ * require scaffolds
+ * require bootstrap_and_overrides
  * base
  *
  */

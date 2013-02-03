@@ -12,5 +12,6 @@
 //
 //= require jquery-1.9.0.min
 // require jquery-ui-1.8.17.custom.min
-// bootstrap.min
+//= bootstrap.min
+// bootstrap.js.coffee
 //
