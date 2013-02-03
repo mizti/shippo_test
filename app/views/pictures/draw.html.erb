@@ -1,7 +1,3 @@
-<% content_for :head do %>
-  <%= stylesheet_link_tag 'farbtastic' %>
-  <%= stylesheet_link_tag 'paint' %>
-<% end %>
 <div id="drawbox" class="container-fluid">
   <div id="canvasbox" class="span5">
     <canvas id="main_canvas">お使いのブラウザはHTML5のCanvas要素に対応していません。</canvas>
@@ -164,8 +160,19 @@
     <input type="button"  class="btn btn-large btn-primary" id="save" value="画像で保存">
   </div>
 </div>
+<div id="slidertest"></div>
+<% content_for :head do %>
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+  <%= stylesheet_link_tag 'farbtastic' %>
+  <%= stylesheet_link_tag 'paint' %>
+  <%= stylesheet_link_tag 'painttest' %>
+<% end %>
+
 <% content_for :tail do %>
+  <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
+  <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
   <%= javascript_include_tag 'rgbcolor' %>
   <%= javascript_include_tag 'farbtastic' %>
-  <%= javascript_include_tag 'paint' %>
+  <%= javascript_include_tag 'painttest' %>
 <% end %>
+

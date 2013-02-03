@@ -13,7 +13,6 @@
     <![endif]-->
 
     <%= stylesheet_link_tag "application", :debug => true, :media => "all" %>
-
     <%= yield :head %>
 
     <!-- For third-generation iPad with high-resolution Retina display: -->
@@ -43,13 +42,13 @@
         <div class="container-fluid">
           <a class="brand" href="#">ShippoTest</a>
           <% if current_user %>
-          <div id="already_login_button" class="pull-right icon-user btn btn-primary">
-            <%= current_user.name %>
-          </div>
+            <div id="already_login_button" class="pull-right icon-user btn btn-primary">
+              <%= current_user.name %>
+            </div>
           <% else %>
-          <div id="login_button" class="pull-right icon-home btn btn-primary">
-            Twitterでログインする
-          </div>
+            <div id="login_button" class="pull-right icon-home btn btn-primary">
+              Twitterでログインする
+            </div>
           <% end %>
         </div><!--/container-fluid -->
       </div>
