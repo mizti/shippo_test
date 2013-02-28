@@ -42,12 +42,13 @@
         <div class="container-fluid">
           <a class="brand" href="#">ShippoTest</a>
           <% if current_user %>
-            <div id="already_login_button" class="pull-right icon-user btn btn-primary">
+            <div id="already_login_button" class="pull-right btn btn-primary">
+              <i class="icon-user icon-white"></i>
               <%= current_user.name %>
             </div>
           <% else %>
             <div id="login_button" class="pull-right btn btn-primary">
-              <i class="icon-home"></i>
+              <i class="icon-home icon-white"></i>
               Twitterでログインする
             </div>
           <% end %>
